@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1 Podcast Episodes
+
+    a(href='/update-cobj') Add to this table
+
+    table
+      thead
+        tr
+          th Name
+          th Guest
+          th Topic
+          th Summary
+      tbody
+        each episode in episodes
+          tr
+            td= episode.properties.name
+            td= episode.properties.guest
+            td= episode.properties.topic
+            td= episode.properties.summary

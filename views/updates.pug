@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1 Add a Podcast Episode
+
+    form(method='POST', action='/update-cobj')
+      label(for='name') Name
+      input(type='text', name='name', id='name', required)
+
+      label(for='guest') Guest
+      input(type='text', name='guest', id='guest')
+
+      label(for='topic') Topic
+      input(type='text', name='topic', id='topic')
+
+      label(for='summary') Summary
+      textarea(name='summary', id='summary', rows='4')
+
+      button(type='submit') Submit
+
+    a(href='/') Return to the homepage
